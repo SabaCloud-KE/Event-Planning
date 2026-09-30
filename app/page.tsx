@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import NextImage from 'next/image'
 import { ArrowDownRight, ArrowUpRight, Check, MessageCircle, Sparkles } from 'lucide-react'
-import { ArrowLink, CtaBand, Image, SectionIntro, SiteShell, images } from '@/components/site-shell'
+import { ArrowLink, CtaBand, Image, SectionIntro, SiteShell } from '@/components/site-shell'
+import { images } from '@/lib/images'
 
 const eventTypes = [
   ['Weddings', 'From intimate ceremonies to elegant receptions, we coordinate the details that make your wedding uniquely yours.', images.hero],

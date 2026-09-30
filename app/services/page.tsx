@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
-import { CtaBand, Image, SectionIntro, SiteShell, images } from '@/components/site-shell'
+import { CtaBand, Image, SectionIntro, SiteShell } from '@/components/site-shell'
+import { images } from '@/lib/images'
 
 const services = [
   ['weddings', 'Weddings', 'From the first idea to the final dance, we coordinate the details that make your wedding uniquely yours.', images.hero, 'Event concept, budget planning, venue and vendor coordination, styling, timeline and event-day management.'],
