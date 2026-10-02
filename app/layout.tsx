@@ -3,8 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Event Brand — Planning & Coordination in Kenya',
-  description: 'Thoughtful event planning, creative styling and seamless coordination for celebrations in Kenya.',
+  title: 'Event Brand Kenya — African Luxury Event Planning & Coordination',
+  description:
+    'Bespoke event planning, cultural ceremony styling (Ruracio, traditional introductions), luxury Harusi, and seamless coordination across Kenya and East Africa.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -28,8 +29,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#FAF7F2' },
+    { media: '(prefers-color-scheme: dark)', color: '#16120E' },
   ],
 }
 

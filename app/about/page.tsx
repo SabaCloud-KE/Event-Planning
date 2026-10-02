@@ -2,4 +2,93 @@ import { ArrowUpRight, Check } from 'lucide-react'
 import { ArrowLink, CtaBand, Image, SectionIntro, SiteShell } from '@/components/site-shell'
 import { images } from '@/lib/images'
 
-export default function AboutPage() { return <SiteShell><main><section className="page-hero"><div className="container"><span className="eyebrow">ABOUT EVENT BRAND</span><h1>Good planning is<br /><em>felt, not seen.</em></h1><p>We create the space for you to be fully present in the moments that matter.</p></div></section><section className="section"><div className="container split-layout"><div className="image-frame tall"><Image src={images.couple} alt="Celebration couple" /></div><div><SectionIntro eyebrow="OUR STORY" title="Beautifully considered from the beginning." text="[Company Name] is a Kenyan event planning and coordination company focused on creating meaningful, beautifully executed celebrations. Our role is to make the planning feel as considered as the celebration itself." /><p className="body-copy">We bring calm, creativity and clarity to the moving parts behind an event — helping you make confident decisions, bringing the right people together and making sure the final experience feels entirely yours.</p><ArrowLink href="/contact">Work with us</ArrowLink></div></div></section><section className="section cream-section"><div className="container"><SectionIntro eyebrow="WHAT GUIDES US" title="Our values" text="The principles behind every conversation, concept and celebration." /><div className="values-grid">{['Creativity', 'Professionalism', 'Integrity', 'Attention to detail', 'Collaboration', 'Client experience'].map((value, i) => <div className="value-card" key={value}><span>0{i + 1}</span><h3>{value}</h3><p>Thoughtful decisions, honest communication and an experience designed around you.</p><Check size={17} /></div>)}</div></div></section><section className="section dark-section"><div className="container split-layout about-dark"><div><SectionIntro light eyebrow="OUR PROMISE" title="You bring the vision. We’ll bring the clarity." text="We take the details seriously, so you can stay connected to the reason you are gathering in the first place." /></div><div className="image-frame"><Image src={images.table} alt="Styled dining table" /></div></div></section><CtaBand /></main></SiteShell> }
+const values = [
+  ['Cultural Reverence', 'Honouring African traditions, family genealogies, and cultural customs with care and authenticity.'],
+  ['Opulent Creativity', 'Fusing rich African textures, earth tones, and modern luxury design into bespoke celebration concepts.'],
+  ['Integrity & Trust', 'Transparent pricing, honest advice, and dependable commitments you and your family can rely upon.'],
+  ['Attentive Coordination', 'Managing every logistical timeline, elder greeting, and vendor queue with quiet mastery.'],
+  ['Collaborative Spirit', 'Working hand-in-hand with families, couples, and top-tier African artisans to bring ideas alive.'],
+  ['Ubuntu Hospitality', 'Treating every single attendee not just as a guest, but as an esteemed part of the celebration.'],
+]
+
+export default function AboutPage() {
+  return (
+    <SiteShell>
+      <main>
+        {/* Page Hero */}
+        <section className="page-hero">
+          <div className="container">
+            <span className="eyebrow">ABOUT EVENT BRAND KENYA</span>
+            <h1>
+              Flawless planning is<br />
+              <em>felt in every moment.</em>
+            </h1>
+            <p>
+              We curate the sanctuary for you and your family to be fully immersed in the joy, honour, and beauty of African celebration.
+            </p>
+          </div>
+        </section>
+
+        {/* Story Section */}
+        <section className="section">
+          <div className="container split-layout">
+            <div className="image-frame tall">
+              <Image src={images.adornment} alt="African bride adorned in regal celebration attire" />
+            </div>
+            <div>
+              <SectionIntro
+                eyebrow="OUR STORY &amp; HERITAGE"
+                title="Rooted in Kenya. Celebrating African grandeur."
+                text="Event Brand Kenya was established to bridge authentic cultural heritage with world-class event production. In East Africa, celebrations are landmark milestones that weave families together."
+              />
+              <p className="body-copy">
+                From coordinating multi-day traditional introduction rites and Ruracio dowry ceremonies to staging luxury lakefront wedding receptions in Naivasha and high-level corporate galas in Nairobi, our role is to bring calm, structure, and opulent aesthetic distinction to your milestone.
+              </p>
+              <ArrowLink href="/contact">Begin Your Journey With Us</ArrowLink>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Grid */}
+        <section className="section cream-section">
+          <div className="container">
+            <SectionIntro
+              eyebrow="OUR FOUNDATION"
+              title="Values that shape every celebration"
+              text="The guiding principles woven into every client consultation, family engagement, and event day."
+            />
+            <div className="values-grid">
+              {values.map(([name, desc], i) => (
+                <div className="value-card" key={name}>
+                  <span>0{i + 1}</span>
+                  <h3>{name}</h3>
+                  <p>{desc}</p>
+                  <Check size={18} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Promise Dark Section */}
+        <section className="section dark-section">
+          <div className="container split-layout about-dark">
+            <div>
+              <SectionIntro
+                light
+                eyebrow="OUR SACRED PROMISE"
+                title="You bring the vision. We bring the tranquility."
+                text="We manage every complex logistic, family dynamic, and timeline detail so you can focus entirely on celebrating the people who matter most."
+              />
+            </div>
+            <div className="image-frame">
+              <Image src={images.table} alt="Warm candlelit event dinner setting" />
+            </div>
+          </div>
+        </section>
+
+        <CtaBand />
+      </main>
+    </SiteShell>
+  )
+}
